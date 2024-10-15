@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 06 - Vuejs do jeito ninja!</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <img v-bind:src="imagem" v-bind:alt="'descrição da imagem'">
+        
+        <!-- <img v-bind:src="'https://ncube.com/wp-content/uploads/2022/06/vue-js-remote-developer.jpg'" v-bind:alt="'descrição da imagem'"> -->
+
+        <!-- <img :src="imagem" :alt="'descrição da imagem'"> -->
+
+
+    </div>
+
+    <script src="https://unpkg.com/vue@2.6.14"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Usando o v-bind",
+                imagem: "https://ncube.com/wp-content/uploads/2022/06/vue-js-remote-developer.jpg"
+            }
+        });
+    </script>
+</body>
+</html>
